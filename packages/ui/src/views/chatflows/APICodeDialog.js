@@ -207,7 +207,8 @@ query({"question": "Hey, how are you?"}).then((response) => {
         } else if (codeLang === 'cURL') {
             return `curl ${baseURL}/api/v1/prediction/${dialogProps.chatflowid} \\
      -X POST \\
-     -d '{"question": "Hey, how are you?"}'`
+     -d '{"question": "Hey, how are you?"}' \\
+     -H "Content-Type: application/json"`
         }
         return ''
     }
@@ -252,6 +253,7 @@ query({"question": "Hey, how are you?"}).then((response) => {
             return `curl ${baseURL}/api/v1/prediction/${dialogProps.chatflowid} \\
      -X POST \\
      -d '{"question": "Hey, how are you?"}' \\
+     -H "Content-Type: application/json" \\
      -H "Authorization: Bearer ${selectedApiKey?.apiKey}"`
         }
         return ''
@@ -325,7 +327,8 @@ query(formData).then((response) => {
 `
         } else if (codeLang === 'cURL') {
             return `curl ${baseURL}/api/v1/prediction/${dialogProps.chatflowid} \\
-     -X POST \\${getConfigExamplesForCurl(configData, 'formData')}`
+     -X POST \\${getConfigExamplesForCurl(configData, 'formData')} \\
+     -H "Content-Type: multipart/form-data"`
         }
         return ''
     }
@@ -375,6 +378,7 @@ query(formData).then((response) => {
         } else if (codeLang === 'cURL') {
             return `curl ${baseURL}/api/v1/prediction/${dialogProps.chatflowid} \\
      -X POST \\${getConfigExamplesForCurl(configData, 'formData')} \\
+     -H "Content-Type: multipart/form-data" \\
      -H "Authorization: Bearer ${selectedApiKey?.apiKey}"`
         }
         return ''
@@ -425,7 +429,8 @@ query({
         } else if (codeLang === 'cURL') {
             return `curl ${baseURL}/api/v1/prediction/${dialogProps.chatflowid} \\
      -X POST \\
-     -d '{"question": "Hey, how are you?", "overrideConfig": {${getConfigExamplesForCurl(configData, 'json')}}'`
+     -d '{"question": "Hey, how are you?", "overrideConfig": {${getConfigExamplesForCurl(configData, 'json')}}' \\
+     -H "Content-Type: application/json"`
         }
         return ''
     }
@@ -478,6 +483,7 @@ query({
             return `curl ${baseURL}/api/v1/prediction/${dialogProps.chatflowid} \\
      -X POST \\
      -d '{"question": "Hey, how are you?", "overrideConfig": {${getConfigExamplesForCurl(configData, 'json')}}' \\
+     -H "Content-Type: application/json" \\
      -H "Authorization: Bearer ${selectedApiKey?.apiKey}"`
         }
         return ''
