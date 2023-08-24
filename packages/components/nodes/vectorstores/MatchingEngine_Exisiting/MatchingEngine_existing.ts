@@ -7,7 +7,7 @@ import { getBaseClasses, getCredentialData, getCredentialParam } from '../../../
 import { GoogleAuthOptions } from 'google-auth-library'
 import { flatten } from 'lodash'
 
-class MatchingEngineUpsert_VectorStores implements INode {
+class MatchingEngineExisting_VectorStores implements INode {
     label: string
     name: string
     version: number
@@ -148,4 +148,4 @@ class MatchingEngineUpsert_VectorStores implements INode {
     }
 }
 
-module.exports = { nodeClass: MatchingEngineUpsert_VectorStores }
+module.exports = { nodeClass: MatchingEngineExisting_VectorStores }
