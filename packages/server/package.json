@@ -45,6 +45,7 @@
     },
     "license": "SEE LICENSE IN LICENSE.md",
     "dependencies": {
+        "@google-cloud/storage": "^6.12.0",
         "@oclif/core": "^1.13.10",
         "axios": "^0.27.2",
         "cors": "^2.8.5",
@@ -54,6 +55,7 @@
         "express-basic-auth": "^1.2.1",
         "flowise-components": "*",
         "flowise-ui": "*",
+        "langchain": "^0.0.133",
         "moment-timezone": "^0.5.34",
         "multer": "^1.4.5-lts.1",
         "mysql": "^2.18.1",
